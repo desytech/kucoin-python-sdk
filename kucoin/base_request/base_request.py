@@ -123,7 +123,7 @@ class KucoinBaseRestApi(object):
                 raise Exception(response_data.content)
             else:
                 if data and data.get('code'):
-                    if data.get('code') == '200000':
+                    if data.get('code').startswith('200'):
                         if data.get('data'):
                             return data['data']
                         else:
