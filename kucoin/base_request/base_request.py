@@ -90,7 +90,7 @@ class KucoinBaseRestApi(object):
                     "Content-Type": "application/json",
                     "KC-API-KEY-VERSION": "2"
                 }
-        headers["User-Agent"] = "kucoin-python-sdk/" + version
+        headers["User-Agent"] = "kucoin-python-sdk/v1.0.26"
         url = urljoin(self.url, uri)
         if not self.session:
             self.session = requests.Session()
