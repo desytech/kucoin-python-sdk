@@ -13,13 +13,6 @@ import socket
 
 from requests import Session
 
-try:
-    import pkg_resources
-
-    version = 'v' + pkg_resources.get_distribution("kucoin-python").version
-except (ModuleNotFoundError, pkg_resources.DistributionNotFound):
-    version = 'v1.0.0'
-
 
 class KucoinBaseRestApi(object):
 
