@@ -201,6 +201,12 @@ class UserData(KucoinBaseRestApi):
             params.update(kwargs)
         return self._request('GET', '/_api/trade-front/market/getSymbolTick', params=params)
 
+    def get_category_currency(self, **kwargs):
+        params = {}
+        if kwargs:
+            params.update(kwargs)
+        return self._request('GET', '/_pxapi/struct-main/v3/products/category-currency', params=params)
+
     def get_account_hold(self, accountId, **kwargs):
         """
         https://docs.kucoin.com/#get-holds
